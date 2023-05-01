@@ -1,0 +1,24 @@
+public class Profesor extends Persona {
+    private String nombre;
+    private int edad;
+    private List<Prestamo> prestamos;
+
+    public Profesor(String numeroDeTelefono) {
+        super(numeroDeTelefono);
+    }
+
+    public void imprimirInformacionPersonal() {
+        System.out.println("Nombre: " + nombre);
+        System.out.println("Edad: " + edad);
+        System.out.println("Teléfono: " + getNumeroDeTelefono());
+    }
+
+    public void imprimirTodaLaInformacion() {
+        System.out.println("Nombre: " + nombre);
+        System.out.println("Edad: " + edad);
+        System.out.println("Teléfono: " + getNumeroDeTelefono());
+        for (Prestamo prestamo : prestamos) {
+            System.out.println(prestamo);
+        }
+    }
+}
