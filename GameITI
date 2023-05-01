@@ -1,0 +1,23 @@
+public class Game extends Player{
+
+    Player player = new Player();
+
+    public void move(String direccion) {
+        switch (direccion.toLowerCase()) {
+            case "derecha":
+                player.setX(player.getX() + 1);
+                break;
+            case "izquierda":
+                player.setX(player.getX() - 1);
+                break;
+            case "arriba":
+                player.setY(player.getY() - 1);
+                break;
+            case "abajo":
+                player.setY(player.getY() + 1);
+                break;
+            default:
+                System.out.println("Dirección inválida");
+        }
+    }
+}
